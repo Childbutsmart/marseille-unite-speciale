@@ -2,35 +2,38 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 
 const DetailsOfWanted = () => {
-  const [people, setPeople] = useState([]);
-  const [peopleImg, setPeopleImg] = useState([]);
-  const [peopleSelf, setPeopleSelf] = useState([]);
+  const [cardsInfos, setCardsInfos] = useState([]);
 
-  const getData = async () => {
+
+  const fetchData = async () => {
     try {
       const response = await axios.get(
         "https://ws-public.interpol.int/notices/v1/red"
       );
-      setPeople(response.data._embedded.notices);
-      console.log("first", response.data._embedded.notices);
-    } catch (err) {
-      console.log("Do not fetch ressource :", err);
+      const resJSON = await response.data._embedded.notices;
+
+      const infos = await Promise.all(
+        resJSON.map(async (element) => {
+          const resp = await axios.get(element._links.self.href);
+          const finalResp = resp.data;
+          return finalResp;
+        })
+      );
+      setCardsInfos(infos);
+    } catch (error) {
+      console.error(
+        "Une erreur s'est produite lors de la récupération des données :",
+        error
+      );
     }
   };
+
   useEffect(() => {
-    getData();
+    fetchData();
   }, []);
 
-  console.log(people);
-  return (
-    <>
-      <section>
-        {people?.map((element) => (
-        <img key={element.entity_id} alt="test" src={element._links?.images?.href?._embedded?.images?.links?.self?.href} />
-        ))}
-        </section>
-    </>
-  );
+  console.log(cardsInfos);
+  
 };
 
 export default DetailsOfWanted;
