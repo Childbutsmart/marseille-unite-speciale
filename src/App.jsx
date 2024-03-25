@@ -1,13 +1,18 @@
 import './App.css'
+import Report_compo from './components/Report_compo'
 import List from './components/list/List.jsx';
 
 
 function App() {
+
+
     return (
-    <div>
+        <>
+        <Report_compo/>
         <List/>
-    </div>
+        </>
     )
+
 }
 
 export default App;
