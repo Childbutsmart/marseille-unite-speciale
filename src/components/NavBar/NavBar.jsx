@@ -7,6 +7,7 @@ import PublicIcon from '@mui/icons-material/Public';
 import ListAltIcon from '@mui/icons-material/ListAlt';
 import ReportIcon from '@mui/icons-material/Report';
 import { theme } from '../Theme/theme';
+import { Link } from 'react-router-dom';
 
 function Navbar() {
     const [open, setOpen] = useState(false);
@@ -44,28 +45,36 @@ function Navbar() {
                     {!isMobile && (
                         <List component="nav" aria-label="main navigation" sx={{ display: 'flex' }}>
                             <ListItem button sx={{ mr: 2 }}>
-                                <ListItemIcon sx={{ color: theme.palette.otherColor.main }}>
-                                    <HomeIcon />
-                                </ListItemIcon>
-                                <ListItemText primary="Accueil" />
+                                <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
+                                    <ListItemIcon sx={{ color: theme.palette.otherColor.main }}>
+                                        <HomeIcon />
+                                    </ListItemIcon>
+                                    <ListItemText primary="Accueil" />
+                                </Link>
                             </ListItem>
                             <ListItem button sx={{ mr: 2 }}>
-                                <ListItemIcon sx={{ color: theme.palette.otherColor.main }}>
-                                    <PublicIcon />
-                                </ListItemIcon>
-                                <ListItemText primary="Carte du Monde" primaryTypographyProps={{ sx: { whiteSpace: 'normal', lineHeight: 'normal' } }} />
+                                <Link to="/map" style={{ textDecoration: 'none', color: 'inherit' }}>
+                                    <ListItemIcon sx={{ color: theme.palette.otherColor.main }}>
+                                        <PublicIcon />
+                                    </ListItemIcon>
+                                    <ListItemText primary="Carte du Monde" primaryTypographyProps={{ sx: { whiteSpace: 'normal', lineHeight: 'normal' } }} />
+                                </Link>
                             </ListItem>
                             <ListItem button sx={{ mr: 2 }}>
-                                <ListItemIcon sx={{ color: theme.palette.otherColor.main }}>
-                                    <ListAltIcon />
-                                </ListItemIcon>
-                                <ListItemText primary="Liste des Criminels" />
+                                <Link to="/list" style={{ textDecoration: 'none', color: 'inherit' }}>
+                                    <ListItemIcon sx={{ color: theme.palette.otherColor.main }}>
+                                        <ListAltIcon />
+                                    </ListItemIcon>
+                                    <ListItemText primary="Liste des Criminels" />
+                                </Link>
                             </ListItem>
                             <ListItem button>
-                                <ListItemIcon sx={{ color: theme.palette.otherColor.main }}>
-                                    <ReportIcon />
-                                </ListItemIcon>
-                                <ListItemText primary="Rapport" />
+                                <Link to="/report" style={{ textDecoration: 'none', color: 'inherit' }}>
+                                    <ListItemIcon sx={{ color: theme.palette.otherColor.main }}>
+                                        <ReportIcon />
+                                    </ListItemIcon>
+                                    <ListItemText primary="Rapport" />
+                                </Link>
                             </ListItem>
                         </List>
                     )}
@@ -83,28 +92,36 @@ function Navbar() {
                         </ListItemIcon>
                     </ListItem>
                     <ListItem button>
-                        <ListItemIcon>
-                            <HomeIcon />
-                        </ListItemIcon>
-                        <ListItemText primary="Accueil" />
+                        <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
+                            <ListItemIcon>
+                                <HomeIcon />
+                            </ListItemIcon>
+                            <ListItemText primary="Accueil" />
+                        </Link>
                     </ListItem>
                     <ListItem button>
-                        <ListItemIcon>
-                            <PublicIcon />
-                        </ListItemIcon>
-                        <ListItemText primary="Carte du Monde" />
+                        <Link to="/map" style={{ textDecoration: 'none', color: 'inherit' }}>
+                            <ListItemIcon>
+                                <PublicIcon />
+                            </ListItemIcon>
+                            <ListItemText primary="Carte du Monde" />
+                        </Link>
                     </ListItem>
                     <ListItem button>
-                        <ListItemIcon>
-                            <ListAltIcon />
-                        </ListItemIcon>
-                        <ListItemText primary="Liste des Criminels" />
+                        <Link to="/list" style={{ textDecoration: 'none', color: 'inherit' }}>
+                            <ListItemIcon>
+                                <ListAltIcon />
+                            </ListItemIcon>
+                            <ListItemText primary="Liste des Criminels" />
+                        </Link>
                     </ListItem>
                     <ListItem button>
-                        <ListItemIcon>
-                            <ReportIcon />
-                        </ListItemIcon>
-                        <ListItemText primary="Rapport" />
+                        <Link to="/report" style={{ textDecoration: 'none', color: 'inherit' }}>
+                            <ListItemIcon>
+                                <ReportIcon />
+                            </ListItemIcon>
+                            <ListItemText primary="Rapport" />
+                        </Link>
                     </ListItem>
                 </List>
             </Drawer>
