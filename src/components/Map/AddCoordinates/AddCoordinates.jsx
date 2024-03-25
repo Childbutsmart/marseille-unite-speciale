@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import opencage from "opencage-api-client";
+
 
 const AddCoordinates = ({ initialObjects, onUpdateObjects, placeOfBirth }) => {
   const [objects, setObjects] = useState([initialObjects]);
@@ -54,7 +54,7 @@ const AddCoordinates = ({ initialObjects, onUpdateObjects, placeOfBirth }) => {
     <>
       {objects.map((obj) => (
         <span>
-          Lieu de naissance : {obj.place_of_birth}{" "}
+          Lieu de naissance : {obj.place_of_birth}
         </span>
       ))}
     </>
