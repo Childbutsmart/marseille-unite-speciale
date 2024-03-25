@@ -22,3 +22,12 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+#TXT
+ignore.txt
+.env
+
+#JSON
+notice.json
+notice-img.json
+notice-self.json
