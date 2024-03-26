@@ -1,6 +1,10 @@
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { useState } from "react";
+import Button from '@mui/material/Button';
+import { theme } from '../Theme/theme';
+import SendIcon from '@mui/icons-material/Send';
+import Paper from '@mui/material/Paper';
 
 function Report_compo() {
     const validationSchema = Yup.object().shape({
@@ -69,8 +73,20 @@ function Report_compo() {
         >
             {formik => (
                 <Form>
+                    <Paper
+                     sx={{ 
+                        backgroundColor: theme.palette.black.main,
+                        border: '2px solid yellow',
+                        padding: '20px', // Ajoute un remplissage pour l'espace intérieur
+                        // marginTop: 5, // Ajoute un espace en haut du formulaire
+                        color: 'white',
+                        maxWidth: 500,
+                        margin: [5 , 'auto', 0, 'auto'],
+       
+                    }}
+                    >
                     <div>
-                        <label htmlFor="choisirPays">Inscrivez votre pays :</label>
+                        <label htmlFor="choisirPays">Choisissez votre pays :</label>
                         <Field
                             name="choisirPays"
                             as="select"
@@ -115,9 +131,19 @@ function Report_compo() {
                         />
                         <ErrorMessage name="raisonSignalement" component="span"/>
                     </div>
-                    <button type="submit">Envoyer</button> 
+                    <Button 
+                    variant="contained" 
+                    size="small"
+                    sx={{ 
+                        backgroundColor: theme.palette.black.main,
+                        borderRadius: theme.shape.borderRadius, // Utilisation correcte de borderRadius
+                        border: '2px solid yellow'
+                    }}
+                    onClick={formik.handleSubmit} 
+                    endIcon={<SendIcon />}>Envoyer</Button> 
 
                     {formSubmitted && <div>Le formulaire a bien été envoyé.</div>}
+                    </Paper>
                 </Form>
             )}
         </Formik>
