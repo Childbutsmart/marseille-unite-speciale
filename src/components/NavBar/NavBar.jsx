@@ -24,7 +24,7 @@ function Navbar() {
     return (
         <>
            
-            <AppBar position="static" sx={{ backgroundColor: theme.palette.black.main }}>
+            <AppBar position="fixed" sx={{ backgroundColor: theme.palette.black.main,marginBottom: '30px' }}>
                 <Toolbar>
                     <Box sx={{ position: 'relative', width: '100%' }}>
                         <img src="./src/assets/img/logowhit.png" alt="Logo" style={{ width: '250px', height: '300px', position: 'absolute', top: '-120px', left: '-50px' }} />
