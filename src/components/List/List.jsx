@@ -120,9 +120,22 @@ const List = () => {
 
     return (
         <>
-            <div ref={newDivRef2}>
+            <div ref={newDivRef2} style={{ 
+                marginTop: '200px', 
+                display: 'flex',
+                minHeight: '80%',
+                maxWidth: '80%',
+                justifyContent: 'center',
+                alignItems: 'flex-start',
+                flexDirection: 'column',
+            }}>
                 <h1>Liste des Criminels recherchés par INTERPOL</h1>
-                <div>
+                <div style={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    minWidth: '100%',
+                    minHeight: '800px',
+                }}>
                     {/* ANCHOR Search Bar */}
                     <span id="searchBar">
                         <input 
@@ -133,25 +146,38 @@ const List = () => {
                         <img src="#" alt="loupe"/>
                     </span>
                     {/* ANCHOR Carroussel */}
-                    <div key={1} id="crimeContainer">
+                    <div key={1} id="crimeContainer" style={{
+                        minHeight: '600px',
+                        width: '80%',
+                    }}>
                         <Carousel
                             autoPlay={false}
                             animation="slide"
                             timeout={500}
                             indicators={false}
                             navButtonsAlwaysInvisible={false}
-                        >
-                            {CardsInfos.map((element) => (
-                                <article key={element.entity_id} id={element.entity_id}>
-                                    <h3>WANTED</h3>
-                                    <img src={element?._links?.thumbnail?.href} alt={element?.entity_id + "-" + element?.name}/>
-                                    <p>{element?.name} {element?.forename}</p>
-                                    {element?.arrest_warrants && element?.arrest_warrants[0] && 
-                                        <p>{element?.arrest_warrants[0]?.charge}</p>
-                                    }
-                                    <button onClick={() => more(element)}> + </button>
-                                </article>
-                            ))}
+                            slidesToShow={2} // Afficher 4 articles à la fois
+                            style={{ 
+                                margin: 'auto', 
+                                maxWidth: '100%', 
+                                minHeight: '550px',
+                                display: 'flex',
+                                flexDirection: 'row', 
+                            }}>
+                                {CardsInfos.map((element) => (
+                                    <Paper key={element.entity_id} id={element.entity_id} style={{ maxWidth: '450px', 
+                                    height: '500px', 
+                                    // Utiliser 'auto' pour que les articles s'ajustent dynamiquement 
+                                    }}> 
+                                        <h3>WANTED</h3>
+                                        <img src={element?._links?.thumbnail?.href} alt={element?.entity_id + "-" + element?.name} style={{ width: '100%'}}/>
+                                        <p>{element?.name} {element?.forename}</p>
+                                        {element?.arrest_warrants && element?.arrest_warrants[0] && 
+                                            <p>{element?.arrest_warrants[0]?.charge}</p>
+                                        }
+                                        <button onClick={() => more(element)} style={{ justifySelf: 'center' }}> + </button>
+                                    </Paper>
+                                ))}
                         </Carousel>
                     </div>
                     {/* ANCHOR Infos Supplémentaires */}
