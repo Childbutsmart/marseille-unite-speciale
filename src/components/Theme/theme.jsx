@@ -24,5 +24,9 @@ export const theme=createTheme({
             secondary:"#C8DE25"
 
         }
+    },
+
+    shape: {
+        borderRadius: 10, // Vous pouvez ajuster le rayon selon vos besoins
     }
 })
