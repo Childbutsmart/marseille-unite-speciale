@@ -3,7 +3,7 @@ import { Marker, Popup } from "react-leaflet";
 import markerIconUrl from "../../../assets/icons/wanted_6027094.png";
 import markerIconUrlFemale from "../../../assets/icons/wanted_female_10062916.png";
 import L from "leaflet";
-import Notice from '../Details/Notice.json';
+
 
 
 const Details = () => {
