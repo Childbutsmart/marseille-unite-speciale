@@ -4,30 +4,21 @@ import Maps from "../Maps/Maps";
 import "leaflet/dist/leaflet.css";
 import useGeoLocate from "../../Hooks_/useGeoLocate/useGeoLocate";
 import Details from "../../API/Details/Details";
+import ShowMyLocation from "../ShowMyLocation/ShowMyLocation";
 
 const WorldMap = () => {
   const [center, setCenter] = useState({
     lat: 45.81510165369121,
     lng: 4.005403918589199,
   });
+  const [buttonClicked, setButtonClicked] = useState(false);
   const zoomLevel = 3.4;
-  const mapRef = useRef();
+  const mapRef = useRef(null);
   const location = useGeoLocate();
 
-  //FIXME - ! Does not work yet, will be fixed soon !
-  //   const showMyLocation = () => {
-  //     if (location.loaded && !location.error) {
-  //       if (mapRef.current && mapRef.current.leafletElement)
-  //       {mapRef.current.leafletElement.flyTo(
-  //         [location.coordinates.lat, location.coordinates.lng],
-  //         zoomLevel,
-  //         {animate: true}
-  //         );
-  //     } else {
-  //       alert(location.error.message);
-  //     }
-  //   }
-  // };
+  const handleButtonClick = () => {
+    setButtonClicked(true);
+  }
 
   return (
     <>
@@ -53,10 +44,11 @@ const WorldMap = () => {
                   </Popup>
                 </Marker>
               )}
+          <ShowMyLocation isButtonClicked={buttonClicked}/>
             </MapContainer>
-          </div>
           <div className="col">
-            {/* <button className="btn" onClick={showMyLocation}>Me localiser</button> */}
+            <button className="btn" onClick={handleButtonClick}>Me localiser</button>
+          </div>
           </div>
         </div>
       </div>
