@@ -1,5 +1,7 @@
 import { useEffect, useState, useRef } from "react";
 import axios from "axios";
+import crime from "../../crime.json"
+
 
 
 const List = () => {
@@ -35,15 +37,17 @@ const List = () => {
     // Fonction récupérant les data des criminels
     const fetchData = async () => {
         try {
-            const response = await axios.get("https://ws-public.interpol.int/notices/v1/red");
-            const resJSON = await response.data._embedded.notices;
+            
+            const resJSON = crime
             
             const infos = await Promise.all(resJSON.map(async (element) => {
                 const resp = await axios.get(element._links.self.href);
+                
                 const finalResp = resp.data;
                 return finalResp;
             }));
             setCardsInfos(infos);
+            
         } catch (error) {
             console.error("Une erreur s'est produite lors de la récupération des données :", error);
         }
@@ -53,6 +57,7 @@ const List = () => {
     // Lance la fonction fetchData
     useEffect(() => {
         fetchData();
+        
     },[]);
 
 
@@ -132,6 +137,7 @@ const List = () => {
                     {/* ANCHOR Carroussel */}
                     <div key={1} id="crimeContainer">
                         {CardsInfos.map((element) => {
+                            console.log(CardsInfos)
                             return (
                                 <article key={element.entity_id} id={element.entity_id}>
                                     <h3>WANTED</h3>

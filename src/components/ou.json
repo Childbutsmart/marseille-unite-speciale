@@ -1,0 +1,869 @@
+[
+    {
+        "date_of_birth": "1995/09/28",
+        "distinguishing_marks": null,
+        "weight": 0,
+        "nationalities": [
+            "RU"
+        ],
+        "entity_id": "2023/17298",
+        "eyes_colors_id": null,
+        "sex_id": "F",
+        "place_of_birth": "ZAGLYADINO VIL., ALEXEEVSKIY DSTR, ORENBURG REGION",
+        "forename": "RUMIYA",
+        "arrest_warrants": [
+            {
+                "charge": "Organization of activity of the terrorist organization and participation in activity of such organization;",
+                "issuing_country_id": "RU",
+                "charge_translation": null
+            }
+        ],
+        "country_of_birth_id": "RU",
+        "hairs_id": [
+            "OTHD"
+        ],
+        "name": "AKHSANOVA",
+        "languages_spoken_ids": [
+            "RUS"
+        ],
+        "height": 0,
+        "_embedded": {
+            "links": []
+        },
+        "_links": {
+            "self": {
+                "href": "https://ws-public.interpol.int/notices/v1/red/2023-17298"
+            },
+            "images": {
+                "href": "https://ws-public.interpol.int/notices/v1/red/2023-17298/images"
+            },
+            "thumbnail": {
+                "href": "https://ws-public.interpol.int/notices/v1/red/2023-17298/images/62926492"
+            }
+        }
+    },
+    {
+        "date_of_birth": "1971/05/29",
+        "distinguishing_marks": null,
+        "weight": null,
+        "nationalities": [
+            "AR",
+            "BO"
+        ],
+        "entity_id": "2024/17273",
+        "eyes_colors_id": null,
+        "sex_id": "M",
+        "place_of_birth": "Jujuy",
+        "forename": "HÉCTOR EDUARDO",
+        "arrest_warrants": [
+            {
+                "charge": "VIOLACION",
+                "issuing_country_id": "BO",
+                "charge_translation": null
+            }
+        ],
+        "country_of_birth_id": "AR",
+        "hairs_id": null,
+        "name": "CASTILLO",
+        "languages_spoken_ids": [
+            "SPA"
+        ],
+        "height": null,
+        "_embedded": {
+            "links": []
+        },
+        "_links": {
+            "self": {
+                "href": "https://ws-public.interpol.int/notices/v1/red/2024-17273"
+            },
+            "images": {
+                "href": "https://ws-public.interpol.int/notices/v1/red/2024-17273/images"
+            },
+            "thumbnail": {
+                "href": "https://ws-public.interpol.int/notices/v1/red/2024-17273/images/63020082"
+            }
+        }
+    },
+    {
+        "date_of_birth": "1989/06/09",
+        "distinguishing_marks": null,
+        "weight": null,
+        "nationalities": [
+            "PL"
+        ],
+        "entity_id": "2024/11965",
+        "eyes_colors_id": null,
+        "sex_id": "M",
+        "place_of_birth": "Wroclaw",
+        "forename": "KRZYSZTOF",
+        "arrest_warrants": [
+            {
+                "charge": "Fraud",
+                "issuing_country_id": "PL",
+                "charge_translation": null
+            }
+        ],
+        "country_of_birth_id": "PL",
+        "hairs_id": null,
+        "name": "ZAKLINSKI",
+        "languages_spoken_ids": null,
+        "height": null,
+        "_embedded": {
+            "links": []
+        },
+        "_links": {
+            "self": {
+                "href": "https://ws-public.interpol.int/notices/v1/red/2024-11965"
+            },
+            "images": {
+                "href": "https://ws-public.interpol.int/notices/v1/red/2024-11965/images"
+            },
+            "thumbnail": {
+                "href": "https://ws-public.interpol.int/notices/v1/red/2024-11965/images/62999500"
+            }
+        }
+    },
+    {
+        "date_of_birth": "1966/12/31",
+        "distinguishing_marks": null,
+        "weight": null,
+        "nationalities": [
+            "IN"
+        ],
+        "entity_id": "2024/15144",
+        "eyes_colors_id": [
+            "BLA"
+        ],
+        "sex_id": "M",
+        "place_of_birth": null,
+        "forename": "SALIM",
+        "arrest_warrants": [
+            {
+                "charge": "THE NARCOTIC DRUGS AND PSYCHOTROPIC SUBSTANCE, ACT, 1985\r\nSECTIONS 8(C)- PROHIBITION OF CERTAIN OPERATIONS, \r\nSECTION 21(C)- PUNISHMENT FOR CONTRAVENTION IN RELATION TO MANUFACTURED DRUGS AND PREPARATIONS, AND \r\nSECTION 29 - PUNISHMENT FOR ABETMENT AND CRIMINAL CONSPIRACY",
+                "issuing_country_id": "IN",
+                "charge_translation": null
+            }
+        ],
+        "country_of_birth_id": null,
+        "hairs_id": [
+            "BLA"
+        ],
+        "name": "DOLA",
+        "languages_spoken_ids": [
+            "MAR",
+            "HIN"
+        ],
+        "height": null,
+        "_embedded": {
+            "links": []
+        },
+        "_links": {
+            "self": {
+                "href": "https://ws-public.interpol.int/notices/v1/red/2024-15144"
+            },
+            "images": {
+                "href": "https://ws-public.interpol.int/notices/v1/red/2024-15144/images"
+            },
+            "thumbnail": {
+                "href": "https://ws-public.interpol.int/notices/v1/red/2024-15144/images/63012362"
+            }
+        }
+    },
+    {
+        "date_of_birth": "1975/08/21",
+        "distinguishing_marks": null,
+        "weight": null,
+        "nationalities": [
+            "PL"
+        ],
+        "entity_id": "2024/16803",
+        "eyes_colors_id": null,
+        "sex_id": "M",
+        "place_of_birth": "LUBAN",
+        "forename": "MARIUSZ WALDEMAR",
+        "arrest_warrants": [
+            {
+                "charge": "attempted murder with grievous bodily harm;  the bodily inviolability",
+                "issuing_country_id": "PL",
+                "charge_translation": null
+            }
+        ],
+        "country_of_birth_id": "PL",
+        "hairs_id": null,
+        "name": "DABROWICKI",
+        "languages_spoken_ids": null,
+        "height": null,
+        "_embedded": {
+            "links": []
+        },
+        "_links": {
+            "self": {
+                "href": "https://ws-public.interpol.int/notices/v1/red/2024-16803"
+            },
+            "images": {
+                "href": "https://ws-public.interpol.int/notices/v1/red/2024-16803/images"
+            },
+            "thumbnail": {
+                "href": "https://ws-public.interpol.int/notices/v1/red/2024-16803/images/63018275"
+            }
+        }
+    },
+    {
+        "date_of_birth": "1980/03/25",
+        "distinguishing_marks": null,
+        "weight": null,
+        "nationalities": [
+            "BR"
+        ],
+        "entity_id": "2024/15271",
+        "eyes_colors_id": null,
+        "sex_id": "M",
+        "place_of_birth": "Paracatu/MG",
+        "forename": "KLEBER",
+        "arrest_warrants": [
+            {
+                "charge": "Drug trafficking and Association for Trafficking",
+                "issuing_country_id": "BR",
+                "charge_translation": null
+            }
+        ],
+        "country_of_birth_id": "BR",
+        "hairs_id": null,
+        "name": "MENDES BARBOSA",
+        "languages_spoken_ids": [
+            "POR"
+        ],
+        "height": null,
+        "_embedded": {
+            "links": []
+        },
+        "_links": {
+            "self": {
+                "href": "https://ws-public.interpol.int/notices/v1/red/2024-15271"
+            },
+            "images": {
+                "href": "https://ws-public.interpol.int/notices/v1/red/2024-15271/images"
+            },
+            "thumbnail": {
+                "href": "https://ws-public.interpol.int/notices/v1/red/2024-15271/images/63012205"
+            }
+        }
+    },
+    {
+        "date_of_birth": "1991/10/14",
+        "distinguishing_marks": "Tattoo in a shape of a woman on left side of chest",
+        "weight": null,
+        "nationalities": [
+            "PL"
+        ],
+        "entity_id": "2024/14818",
+        "eyes_colors_id": [
+            "BRO"
+        ],
+        "sex_id": "M",
+        "place_of_birth": "LODZ",
+        "forename": "PATRYK DARIUSZ",
+        "arrest_warrants": [
+            {
+                "charge": "kidnapping, extortion",
+                "issuing_country_id": "PL",
+                "charge_translation": null
+            }
+        ],
+        "country_of_birth_id": "PL",
+        "hairs_id": [
+            "BLA"
+        ],
+        "name": "SIBINSKI",
+        "languages_spoken_ids": [
+            "POL"
+        ],
+        "height": 1.8,
+        "_embedded": {
+            "links": []
+        },
+        "_links": {
+            "self": {
+                "href": "https://ws-public.interpol.int/notices/v1/red/2024-14818"
+            },
+            "images": {
+                "href": "https://ws-public.interpol.int/notices/v1/red/2024-14818/images"
+            },
+            "thumbnail": {
+                "href": "https://ws-public.interpol.int/notices/v1/red/2024-14818/images/63010343"
+            }
+        }
+    },
+    {
+        "date_of_birth": "1986/10/19",
+        "distinguishing_marks": null,
+        "weight": null,
+        "nationalities": [
+            "SV"
+        ],
+        "entity_id": "2024/10984",
+        "eyes_colors_id": null,
+        "sex_id": "M",
+        "place_of_birth": "municipio de Izalco, departamento de Sonsonate",
+        "forename": "RAÚL HUMBERTO",
+        "arrest_warrants": [
+            {
+                "charge": "Violación",
+                "issuing_country_id": "SV",
+                "charge_translation": null
+            }
+        ],
+        "country_of_birth_id": "SV",
+        "hairs_id": null,
+        "name": "CÓRDOVA MATEO",
+        "languages_spoken_ids": [
+            "SPA"
+        ],
+        "height": null,
+        "_embedded": {
+            "links": []
+        },
+        "_links": {
+            "self": {
+                "href": "https://ws-public.interpol.int/notices/v1/red/2024-10984"
+            },
+            "images": {
+                "href": "https://ws-public.interpol.int/notices/v1/red/2024-10984/images"
+            },
+            "thumbnail": {
+                "href": "https://ws-public.interpol.int/notices/v1/red/2024-10984/images/62996400"
+            }
+        }
+    },
+    {
+        "date_of_birth": "1982/07/26",
+        "distinguishing_marks": "numerous tattoos e.g. banknotes (right arm), feathers (left arm), mother of God, angels and sacred motifs (back and chest), left and right shoulders",
+        "weight": null,
+        "nationalities": [
+            "PL"
+        ],
+        "entity_id": "2024/12733",
+        "eyes_colors_id": [
+            "BROD"
+        ],
+        "sex_id": "M",
+        "place_of_birth": "LODZ",
+        "forename": "SEBASTIAN ARKADIUSZ",
+        "arrest_warrants": [
+            {
+                "charge": "participation in a criminal organisation, fraud, dealing with stolen property, possession of fire arms without license",
+                "issuing_country_id": "PL",
+                "charge_translation": null
+            },
+            {
+                "charge": "kidnapping, extortion",
+                "issuing_country_id": "PL",
+                "charge_translation": null
+            }
+        ],
+        "country_of_birth_id": "PL",
+        "hairs_id": [
+            "BLA"
+        ],
+        "name": "BIJAK",
+        "languages_spoken_ids": [
+            "POL"
+        ],
+        "height": 1.8,
+        "_embedded": {
+            "links": []
+        },
+        "_links": {
+            "self": {
+                "href": "https://ws-public.interpol.int/notices/v1/red/2024-12733"
+            },
+            "images": {
+                "href": "https://ws-public.interpol.int/notices/v1/red/2024-12733/images"
+            },
+            "thumbnail": {
+                "href": "https://ws-public.interpol.int/notices/v1/red/2024-12733/images/63002315"
+            }
+        }
+    },
+    {
+        "date_of_birth": "1987/03/21",
+        "distinguishing_marks": null,
+        "weight": null,
+        "nationalities": [
+            "BO"
+        ],
+        "entity_id": "2024/12115",
+        "eyes_colors_id": null,
+        "sex_id": "F",
+        "place_of_birth": "SANTA CRUZ DE LA SIERRA",
+        "forename": "WILMA",
+        "arrest_warrants": [
+            {
+                "charge": "Tráfico de Estupefacientes",
+                "issuing_country_id": "BR",
+                "charge_translation": null
+            }
+        ],
+        "country_of_birth_id": "BO",
+        "hairs_id": null,
+        "name": "TAPIA ESCALERA",
+        "languages_spoken_ids": [
+            "SPA"
+        ],
+        "height": null,
+        "_embedded": {
+            "links": []
+        },
+        "_links": {
+            "self": {
+                "href": "https://ws-public.interpol.int/notices/v1/red/2024-12115"
+            },
+            "images": {
+                "href": "https://ws-public.interpol.int/notices/v1/red/2024-12115/images"
+            },
+            "thumbnail": {
+                "href": "https://ws-public.interpol.int/notices/v1/red/2024-12115/images/63000052"
+            }
+        }
+    },
+    {
+        "date_of_birth": "1971/04/08",
+        "distinguishing_marks": null,
+        "weight": null,
+        "nationalities": [
+            "PT"
+        ],
+        "entity_id": "2023/14959",
+        "eyes_colors_id": null,
+        "sex_id": "M",
+        "place_of_birth": null,
+        "forename": "ALBERTO SEVERO",
+        "arrest_warrants": [
+            {
+                "charge": "- Delito de homicidio doloso consumado",
+                "issuing_country_id": "ES",
+                "charge_translation": null
+            }
+        ],
+        "country_of_birth_id": null,
+        "hairs_id": null,
+        "name": "DE SOUSA MADUREIRA",
+        "languages_spoken_ids": null,
+        "height": 1.68,
+        "_embedded": {
+            "links": []
+        },
+        "_links": {
+            "self": {
+                "href": "https://ws-public.interpol.int/notices/v1/red/2023-14959"
+            },
+            "images": {
+                "href": "https://ws-public.interpol.int/notices/v1/red/2023-14959/images"
+            },
+            "thumbnail": {
+                "href": "https://ws-public.interpol.int/notices/v1/red/2023-14959/images/62682704"
+            }
+        }
+    },
+    {
+        "date_of_birth": "1994/04/03",
+        "distinguishing_marks": "has dead locks",
+        "weight": null,
+        "nationalities": [
+            "BZ"
+        ],
+        "entity_id": "2024/11501",
+        "eyes_colors_id": [
+            "BROD"
+        ],
+        "sex_id": "M",
+        "place_of_birth": "Belize City",
+        "forename": "JAMES LYSON",
+        "arrest_warrants": [
+            {
+                "charge": "MURDER",
+                "issuing_country_id": "BZ",
+                "charge_translation": null
+            }
+        ],
+        "country_of_birth_id": "BZ",
+        "hairs_id": [
+            "BLA"
+        ],
+        "name": "CACHO",
+        "languages_spoken_ids": [
+            "SPA",
+            "ENG"
+        ],
+        "height": null,
+        "_embedded": {
+            "links": []
+        },
+        "_links": {
+            "self": {
+                "href": "https://ws-public.interpol.int/notices/v1/red/2024-11501"
+            },
+            "images": {
+                "href": "https://ws-public.interpol.int/notices/v1/red/2024-11501/images"
+            },
+            "thumbnail": {
+                "href": "https://ws-public.interpol.int/notices/v1/red/2024-11501/images/62997696"
+            }
+        }
+    },
+    {
+        "date_of_birth": "1984/08/24",
+        "distinguishing_marks": null,
+        "weight": 72,
+        "nationalities": [
+            "NI"
+        ],
+        "entity_id": "2024/3211",
+        "eyes_colors_id": [
+            "BLA"
+        ],
+        "sex_id": "M",
+        "place_of_birth": "SAN RAMON / MATAGALPA",
+        "forename": "LUIS ENRIQUE",
+        "arrest_warrants": [
+            {
+                "charge": "FEMICIDIO",
+                "issuing_country_id": "NI",
+                "charge_translation": null
+            }
+        ],
+        "country_of_birth_id": "NI",
+        "hairs_id": [
+            "BLA"
+        ],
+        "name": "SANCHEZ PARRILLA",
+        "languages_spoken_ids": [
+            "SPA"
+        ],
+        "height": 1.7,
+        "_embedded": {
+            "links": []
+        },
+        "_links": {
+            "self": {
+                "href": "https://ws-public.interpol.int/notices/v1/red/2024-3211"
+            },
+            "images": {
+                "href": "https://ws-public.interpol.int/notices/v1/red/2024-3211/images"
+            },
+            "thumbnail": {
+                "href": "https://ws-public.interpol.int/notices/v1/red/2024-3211/images/62963096"
+            }
+        }
+    },
+    {
+        "date_of_birth": "1999/08/19",
+        "distinguishing_marks": null,
+        "weight": null,
+        "nationalities": [
+            "BZ"
+        ],
+        "entity_id": "2024/10341",
+        "eyes_colors_id": [
+            "BROD"
+        ],
+        "sex_id": "M",
+        "place_of_birth": "Belize City",
+        "forename": "TAYLER ANTHONY",
+        "arrest_warrants": [
+            {
+                "charge": "Murder",
+                "issuing_country_id": "BZ",
+                "charge_translation": null
+            }
+        ],
+        "country_of_birth_id": "BZ",
+        "hairs_id": [
+            "BLA"
+        ],
+        "name": "SMITH",
+        "languages_spoken_ids": [
+            "ENG",
+            "SPA"
+        ],
+        "height": 1.8,
+        "_embedded": {
+            "links": []
+        },
+        "_links": {
+            "self": {
+                "href": "https://ws-public.interpol.int/notices/v1/red/2024-10341"
+            },
+            "images": {
+                "href": "https://ws-public.interpol.int/notices/v1/red/2024-10341/images"
+            },
+            "thumbnail": {
+                "href": "https://ws-public.interpol.int/notices/v1/red/2024-10341/images/62992734"
+            }
+        }
+    },
+    {
+        "date_of_birth": "1990/11/26",
+        "distinguishing_marks": "Tattoo on his right arm.\r\nTattoo on his left leg",
+        "weight": null,
+        "nationalities": [
+            "BR"
+        ],
+        "entity_id": "2024/10717",
+        "eyes_colors_id": null,
+        "sex_id": "M",
+        "place_of_birth": "RIO BRANCO/AC",
+        "forename": "DEIBSON",
+        "arrest_warrants": [
+            {
+                "charge": "Aggravated robbery, setting fire and manufacturing explosives or ammunition.",
+                "issuing_country_id": "BR",
+                "charge_translation": null
+            }
+        ],
+        "country_of_birth_id": "BR",
+        "hairs_id": null,
+        "name": "CABRAL NASCIMENTO",
+        "languages_spoken_ids": [
+            "POR"
+        ],
+        "height": 1.8,
+        "_embedded": {
+            "links": []
+        },
+        "_links": {
+            "self": {
+                "href": "https://ws-public.interpol.int/notices/v1/red/2024-10717"
+            },
+            "images": {
+                "href": "https://ws-public.interpol.int/notices/v1/red/2024-10717/images"
+            },
+            "thumbnail": {
+                "href": "https://ws-public.interpol.int/notices/v1/red/2024-10717/images/62994041"
+            }
+        }
+    },
+    {
+        "date_of_birth": "1988/12/30",
+        "distinguishing_marks": "Tattoo on left thigh (clown, dog, cross)\r\nTattoo on left hand (swastika)\r\nSmall tattoo on left forearm",
+        "weight": null,
+        "nationalities": [
+            "BR"
+        ],
+        "entity_id": "2024/10721",
+        "eyes_colors_id": null,
+        "sex_id": "M",
+        "place_of_birth": "RIO BRANCO/ACRE",
+        "forename": "ROGÉRIO",
+        "arrest_warrants": [
+            {
+                "charge": "Drug trafficking, robbery and ilegal possesion of firearm",
+                "issuing_country_id": "BR",
+                "charge_translation": null
+            }
+        ],
+        "country_of_birth_id": "BR",
+        "hairs_id": null,
+        "name": "DA SILVA MENDONÇA",
+        "languages_spoken_ids": [
+            "POR"
+        ],
+        "height": null,
+        "_embedded": {
+            "links": []
+        },
+        "_links": {
+            "self": {
+                "href": "https://ws-public.interpol.int/notices/v1/red/2024-10721"
+            },
+            "images": {
+                "href": "https://ws-public.interpol.int/notices/v1/red/2024-10721/images"
+            },
+            "thumbnail": {
+                "href": "https://ws-public.interpol.int/notices/v1/red/2024-10721/images/62994071"
+            }
+        }
+    },
+    {
+        "date_of_birth": "1945/10/13",
+        "distinguishing_marks": null,
+        "weight": null,
+        "nationalities": [
+            "SR"
+        ],
+        "entity_id": "2024/7429",
+        "eyes_colors_id": [
+            "BROD"
+        ],
+        "sex_id": "M",
+        "place_of_birth": null,
+        "forename": "DESIRE DELANO",
+        "arrest_warrants": [
+            {
+                "charge": "Participation in the commission to commit Murder",
+                "issuing_country_id": "SR",
+                "charge_translation": null
+            }
+        ],
+        "country_of_birth_id": "SR",
+        "hairs_id": [
+            "HAIB"
+        ],
+        "name": "BOUTERSE",
+        "languages_spoken_ids": [
+            "ENG",
+            "DUT"
+        ],
+        "height": null,
+        "_embedded": {
+            "links": []
+        },
+        "_links": {
+            "self": {
+                "href": "https://ws-public.interpol.int/notices/v1/red/2024-7429"
+            },
+            "images": {
+                "href": "https://ws-public.interpol.int/notices/v1/red/2024-7429/images"
+            },
+            "thumbnail": {
+                "href": "https://ws-public.interpol.int/notices/v1/red/2024-7429/images/62979322"
+            }
+        }
+    },
+    {
+        "date_of_birth": "1952/12/12",
+        "distinguishing_marks": null,
+        "weight": null,
+        "nationalities": [
+            "SR"
+        ],
+        "entity_id": "2024/7419",
+        "eyes_colors_id": [
+            "BROD"
+        ],
+        "sex_id": "M",
+        "place_of_birth": null,
+        "forename": "IWAN LEENDERT",
+        "arrest_warrants": [
+            {
+                "charge": "Participation in the commission to commit Murder",
+                "issuing_country_id": "SR",
+                "charge_translation": null
+            }
+        ],
+        "country_of_birth_id": "SR",
+        "hairs_id": [
+            "HAIB"
+        ],
+        "name": "DIJKSTEEL",
+        "languages_spoken_ids": [
+            "DUT",
+            "ENG"
+        ],
+        "height": null,
+        "_embedded": {
+            "links": []
+        },
+        "_links": {
+            "self": {
+                "href": "https://ws-public.interpol.int/notices/v1/red/2024-7419"
+            },
+            "images": {
+                "href": "https://ws-public.interpol.int/notices/v1/red/2024-7419/images"
+            },
+            "thumbnail": {
+                "href": "https://ws-public.interpol.int/notices/v1/red/2024-7419/images/62979235"
+            }
+        }
+    },
+    {
+        "date_of_birth": "1973/05/04",
+        "distinguishing_marks": null,
+        "weight": 80,
+        "nationalities": [
+            "PL"
+        ],
+        "entity_id": "2003/44473",
+        "eyes_colors_id": [
+            "BROL"
+        ],
+        "sex_id": "M",
+        "place_of_birth": "INOWROCLAW",
+        "forename": "RAFAL",
+        "arrest_warrants": [
+            {
+                "charge": "4- PIMPING",
+                "issuing_country_id": "PL",
+                "charge_translation": null
+            },
+            {
+                "charge": "1- MURDER BY USE OF FIREARM\r\n2- ILLEGAL BORDER CROSSING BY USE OF FORGED DOCUMENT\r\n3- ILLEGAL THREATS",
+                "issuing_country_id": "PL",
+                "charge_translation": null
+            }
+        ],
+        "country_of_birth_id": "PL",
+        "hairs_id": null,
+        "name": "ZABLOCKI",
+        "languages_spoken_ids": [
+            "GER",
+            "POL"
+        ],
+        "height": 1.85,
+        "_embedded": {
+            "links": []
+        },
+        "_links": {
+            "self": {
+                "href": "https://ws-public.interpol.int/notices/v1/red/2003-44473"
+            },
+            "images": {
+                "href": "https://ws-public.interpol.int/notices/v1/red/2003-44473/images"
+            },
+            "thumbnail": {
+                "href": "https://ws-public.interpol.int/notices/v1/red/2003-44473/images/61172376"
+            }
+        }
+    },
+    {
+        "date_of_birth": "1966/08/31",
+        "distinguishing_marks": null,
+        "weight": null,
+        "nationalities": [
+            "BE"
+        ],
+        "entity_id": "2024/9074",
+        "eyes_colors_id": null,
+        "sex_id": "M",
+        "place_of_birth": "IXELLES",
+        "forename": "OLIVIER",
+        "arrest_warrants": [
+            {
+                "charge": "Forgery and use of forgeries // Fraud // Computerrelated\r\nforgery // Computer fraud // Breach of trust",
+                "issuing_country_id": "BE",
+                "charge_translation": null
+            }
+        ],
+        "country_of_birth_id": "BE",
+        "hairs_id": null,
+        "name": "UYTTERSPROT",
+        "languages_spoken_ids": [
+            "FRE"
+        ],
+        "height": null,
+        "_embedded": {
+            "links": []
+        },
+        "_links": {
+            "self": {
+                "href": "https://ws-public.interpol.int/notices/v1/red/2024-9074"
+            },
+            "images": {
+                "href": "https://ws-public.interpol.int/notices/v1/red/2024-9074/images"
+            },
+            "thumbnail": {
+                "href": "https://ws-public.interpol.int/notices/v1/red/2024-9074/images/62986384"
+            }
+        }
+    }
+]
