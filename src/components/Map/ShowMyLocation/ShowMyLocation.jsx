@@ -4,11 +4,10 @@ import { Marker, Popup, useMapEvents } from 'react-leaflet';
 const ShowMyLocation = ({ isButtonClicked }) => {
   const [position, setPosition] = useState(null);
   const map = useMapEvents({
-    click() {
       if (isButtonClicked) {
         map.locate();
-      }
-    },
+      },
+
     locationfound(e) {
       setPosition(e.latlng);
       map.flyTo(e.latlng, map.getZoom());
