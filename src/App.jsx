@@ -1,4 +1,3 @@
-import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css'
 import WorldMap from './components/Map/WorldMap/WorldMap';
@@ -9,7 +8,6 @@ import Home from './components/Home/Home.jsx'
 
 
 function App() {
-
 
     return (
         <Router>

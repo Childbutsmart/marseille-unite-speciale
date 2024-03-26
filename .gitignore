@@ -26,6 +26,7 @@ dist-ssr
 #TXT
 ignore.txt
 .env
+note.md
 
 #JSON
 notice.json
