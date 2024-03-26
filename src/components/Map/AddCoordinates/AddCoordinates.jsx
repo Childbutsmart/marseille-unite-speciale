@@ -43,7 +43,7 @@ const AddCoordinates = ({ initialObjects, onUpdateObjects, placeOfBirth }) => {
   useEffect(() => {
     placeOfBirth?.forEach((cityName, index) => {
       geocodeAddress(cityName, index);
-    });
+    }, []);
 
     if (onUpdateObjects) {
       onUpdateObjects([...objects]);

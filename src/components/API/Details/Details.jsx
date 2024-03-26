@@ -44,7 +44,7 @@ const Details = () => {
   }, []);
 
   // State pour stocker les objets avec les coordonnées ajoutées
-  const [objects] = useState([]);
+  let [objects] = useState([]);
 
   // Fonction de géocodage d'une adresse
   const geocodeAddress = async (cityName, index) => {
@@ -74,7 +74,7 @@ const Details = () => {
       } else {
         console.error("Lieu de naissance non défini pour l'objet", index);
       }
-      
+
     } catch (error) {
       console.error("Error while geocoding address: ", error);
     }
