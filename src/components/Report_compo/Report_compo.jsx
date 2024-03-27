@@ -81,7 +81,12 @@ function Report_compo() {
                     <img src="src/assets/img/crime_scene.jpg" alt="Crime Scene" style={{ width: '100%', height: '80%', objectFit: 'cover' }} />
                     <Box position="absolute" top={0} left={0} width="100%" height="80%" bgcolor="rgba(255, 255, 255, 0.6)" />
                     <Box position="absolute" bottom={100} right={0} p={2}>
-                        <Typography variant="h3" style={{ color: 'yellow' }}>Aidez nous à les retrouver</Typography>
+                        <Typography variant="h3" style={{ 
+                            color: 'yellow',
+                            fontWeight: 'bold', 
+                            WebkitTextStrokeWidth: '1px', 
+                            WebkitTextStrokeColor: 'white',}}>
+                                Aidez nous à les retrouver</Typography>
                     </Box>
                 </Box>
                     <Paper
@@ -97,16 +102,25 @@ function Report_compo() {
                     }}
                     >
                     <div>
-                        <label htmlFor="choisirPays">Choisissez votre pays :</label><br />
+                        <Box
+                        sx={{
+                            textAlign:'center',
+                            marginBottom: 1,
+                        }}><label htmlFor="choisirPays">Choisissez votre pays :</label><br /></Box>
                         <Box
                         sx={{
                             border: '1px solid black', // Exemple de style
                             borderRadius: theme.shape.borderRadius, // Exemple de style
                             padding: '10px', // Exemple de style
                             textAlign: 'center',
+                            marginBottom: 1,
                         }}
                         >
                         <Field
+                            style={{
+                                maxWidth: '100%',
+                                width:'400px'
+                            }}
                             name="choisirPays"
                             as="select"
                             id="choisirPays"
@@ -118,19 +132,33 @@ function Report_compo() {
                             ))}
                         </Field>
                         </Box>
-                        <ErrorMessage name="choisirPays" component="span"/>
+                        <Box sx={{
+                            marginBottom:2,
+                            color:'red',
+                            fontWeight: 'bold', 
+                            WebkitTextStrokeWidth: '0.1px', 
+                            WebkitTextStrokeColor: 'white', 
+                        }}><ErrorMessage name="choisirPays" component="span"/></Box>
                     </div>
                     <div>
-                        <label htmlFor="criminel">Nom du criminel concerné:</label><br />
+                        <Box sx={{
+                            textAlign:'center',
+                            marginBottom: 1,}}>
+                                <label htmlFor="criminel">Nom du criminel concerné:</label><br /></Box>
                         <Box
                         sx={{
                             border: '1px solid black', // Exemple de style
                             borderRadius: theme.shape.borderRadius, // Exemple de style
                             padding: '10px', // Exemple de style
                             textAlign: 'center',
+                            marginBottom: 1,
                         }}
                         >
                         <Field 
+                            style={{
+                                maxWidth: '100%',
+                                width:'400px'
+                            }}
                             name="criminel" 
                             type="text" 
                             id="criminel"
@@ -138,38 +166,66 @@ function Report_compo() {
                         />
                         </Box>
 
-                        <ErrorMessage name="criminel" component="span"/>
+                        <Box sx={{
+                            marginBottom:2,
+                            color:'red',
+                            fontWeight: 'bold', 
+                            WebkitTextStrokeWidth: '0.1px', 
+                            WebkitTextStrokeColor: 'white', 
+                        }}><ErrorMessage name="criminel" component="span"/></Box>
                     </div>
                     <div>
-                        <label htmlFor="email">Votre adresse mail:</label><br />
+                        <Box sx={{
+                            textAlign:'center',
+                            marginBottom: 1,}}>
+                                <label htmlFor="email">Votre adresse mail:</label><br /></Box>
                         <Box
                         sx={{
                             border: '1px solid black', // Exemple de style
                             borderRadius: theme.shape.borderRadius, // Exemple de style
                             padding: '10px', // Exemple de style
                             textAlign: 'center',
+                            marginBottom: 1,
                         }}
                         >
                         <Field 
+                            style={{
+                                maxWidth: '100%',
+                                width:'400px'
+                            }}
                             name="email" 
                             type="text" 
                             id="email"
                             onClick={() => handleFieldClick('email', formik)}
                         />
                         </Box>
-                        <ErrorMessage name="email" component="span"/>
+                        <Box sx={{
+                            marginBottom:2,
+                            color:'red',
+                            fontWeight: 'bold', 
+                            WebkitTextStrokeWidth: '0.1px', 
+                            WebkitTextStrokeColor: 'white', 
+                        }}><ErrorMessage name="email" component="span"/></Box>
                     </div>
                     <div>
-                        <label htmlFor="raisonSignalement">Raison du signalement:</label><br />
+                        <Box sx={{
+                            textAlign:'center',
+                            marginBottom: 1,}}>
+                                <label htmlFor="raisonSignalement">Raison du signalement:</label><br /></Box>
                         <Box
                         sx={{
                             border: '1px solid black', // Exemple de style
                             borderRadius: theme.shape.borderRadius, // Exemple de style
                             padding: '10px', // Exemple de style
                             textAlign: 'center',
+                            marginBottom: 1,
                         }}
                         >
                         <Field 
+                            style={{
+                                maxWidth: '100%',
+                                width:'400px'
+                            }}
                             name="raisonSignalement" 
                             type="textarea" 
                             id="raisonSignalement"
@@ -177,7 +233,13 @@ function Report_compo() {
                             onClick={() => handleFieldClick('raisonSignalement', formik)}
                         />
                         </Box>
-                        <ErrorMessage name="raisonSignalement" component="span"/>
+                        <Box sx={{
+                            marginBottom:2,
+                            color:'red',
+                            fontWeight: 'bold', 
+                            WebkitTextStrokeWidth: '0.1px', 
+                            WebkitTextStrokeColor: 'white', 
+                        }}><ErrorMessage name="raisonSignalement" component="span"/></Box>
                     </div>
                     <div style={{ display: 'flex', justifyContent: 'center' }}>
                     <Button 
@@ -187,13 +249,13 @@ function Report_compo() {
                         backgroundColor: theme.palette.black.main,
                         borderRadius: theme.shape.borderRadius, // Utilisation correcte de borderRadius
                         border: '2px solid yellow',
-                        marginTop: 5,
+                        marginTop: 3,
                     }}
                     onClick={formik.handleSubmit} 
                     endIcon={<SendIcon />}>Envoyer</Button> 
                     </div>
 
-                    {formSubmitted && <div>Le formulaire a bien été envoyé.</div>}
+                    {formSubmitted && <Box sx={{marginTop:1}}><div>Le formulaire a bien été envoyé.</div></Box>}
                     </Paper>
                 </Form>
             )}
