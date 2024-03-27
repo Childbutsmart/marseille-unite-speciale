@@ -1,12 +1,13 @@
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
-import { useState } from "react";
+import { useState,useRef } from "react";
 import Button from '@mui/material/Button';
 import { theme } from '../Theme/theme';
 import SendIcon from '@mui/icons-material/Send';
 import Paper from '@mui/material/Paper';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
+import pampam from '../../assets/pampam.wav'
 
 
 
@@ -53,12 +54,14 @@ function Report_compo() {
     };
 
     const [formSubmitted, setFormSubmitted] = useState(false);
+    const audioRef = useRef(null);
 
     function handleSubmit(formValues, { resetForm }) {
         console.log("Form Values", formValues);
         // Envoyer les données du formulaire...
         setFormSubmitted(true); // Met à jour l'état formSubmitted à true après la soumission réussie
         resetForm(); // Réinitialise les valeurs du formulaire
+        audioRef.current.play()
     }
 
     const handleFieldClick = (fieldName, formik) => {
@@ -256,6 +259,7 @@ function Report_compo() {
                     </div>
 
                     {formSubmitted && <Box sx={{marginTop:1}}><div>Le formulaire a bien été envoyé.</div></Box>}
+                    <audio ref={audioRef} src={pampam} />
                     </Paper>
                 </Form>
             )}
