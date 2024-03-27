@@ -2,7 +2,7 @@ import { useEffect, useState, useRef } from "react";
 // import axios from "axios";
 import Niveau1 from "/src/components/niveau1.json"
 import Carousel from 'react-material-ui-carousel';
-import {Paper} from '@mui/material';
+import { Paper, Typography, TextField, Button, Box, Grid } from '@mui/material';
 
 
 
@@ -24,7 +24,7 @@ const List = () => {
     const newDivRef2 = useRef(null); 
 
 
-    // Fonction permettant de revenir au top de la page ors du click sur le boutton assigné
+    // Fonction permettant de revenir au top de la page lors du click sur le boutton assigné
     const clicked = () => {
         if (newDivRef2.current) {
             newDivRef2.current.scrollIntoView({ behavior: "smooth" }); // Faire défiler jusqu'à la nouvelle div
@@ -120,35 +120,54 @@ const List = () => {
 
     return (
         <>
-            <div ref={newDivRef2} style={{ 
-                marginTop: '200px', 
+            <Box ref={newDivRef2} sx={{ 
                 display: 'flex',
-                minHeight: '80%',
-                maxWidth: '80%',
-                justifyContent: 'center',
-                alignItems: 'flex-start',
                 flexDirection: 'column',
+                marginTop: '150px', 
+                maxWidth: '100%',
             }}>
-                <h1>Liste des Criminels recherchés par INTERPOL</h1>
-                <div style={{
+                <Typography variant="h1" style={{
+                        textAlign: 'center'
+                }}>
+                    Liste des Criminels recherchés par INTERPOL
+                </Typography>
+                <Box sx={{
                     display: 'flex',
                     flexDirection: 'column',
-                    minWidth: '100%',
+                    justifyContent: 'space-evenly',
+                    maxWidth: '100%',
                     minHeight: '800px',
                 }}>
+                    
                     {/* ANCHOR Search Bar */}
-                    <span id="searchBar">
-                        <input 
+                    
+                    <Box id="searchBar" sx={{
+                        padding: '2px',
+                        marginLeft: '1em',
+                        maxWidth: 'fit-content',
+                        border: '1px solid grey',
+                        borderRadius: '10px',
+                    }}>
+                        <TextField 
                             type="text" 
-                            placeholder="rechez le nom ici"
+                            placeholder="recherchez le nom ici"
                             onChange={(e) => {searching(e)}}
+                            sx={{
+                                paddingLeft: '8px',
+                                boxShadow: 'none',
+                                border: 'none',
+                            }}
                         />
                         <img src="#" alt="loupe"/>
-                    </span>
+                    </Box>
+                    
                     {/* ANCHOR Carroussel */}
-                    <div key={1} id="crimeContainer" style={{
+
+                    <Box key={1} id="crimeContainer" sx={{
                         minHeight: '600px',
                         width: '80%',
+                        margin: 'auto',
+                        overflow: 'hidden',
                     }}>
                         <Carousel
                             autoPlay={false}
@@ -156,121 +175,105 @@ const List = () => {
                             timeout={500}
                             indicators={false}
                             navButtonsAlwaysInvisible={false}
-                            slidesToShow={2} // Afficher 4 articles à la fois
+                            slidesToShow={4} // Afficher 4 articles à la fois
                             style={{ 
                                 margin: 'auto', 
                                 maxWidth: '100%', 
-                                minHeight: '550px',
+                                height: '100%',
                                 display: 'flex',
                                 flexDirection: 'row', 
+                                alignItems: 'stretch', // Pour forcer les éléments à s'étirer verticalement
                             }}>
                                 {CardsInfos.map((element) => (
-                                    <Paper key={element.entity_id} id={element.entity_id} style={{ maxWidth: '450px', 
-                                    height: '500px', 
-                                    // Utiliser 'auto' pour que les articles s'ajustent dynamiquement 
-                                    }}> 
-                                        <h3>WANTED</h3>
-                                        <img src={element?._links?.thumbnail?.href} alt={element?.entity_id + "-" + element?.name} style={{ width: '100%'}}/>
-                                        <p>{element?.name} {element?.forename}</p>
-                                        {element?.arrest_warrants && element?.arrest_warrants[0] && 
-                                            <p>{element?.arrest_warrants[0]?.charge}</p>
-                                        }
-                                        <button onClick={() => more(element)} style={{ justifySelf: 'center' }}> + </button>
-                                    </Paper>
+                                    <Box key={element.entity_id} id={element.entity_id}>
+                                        <Paper sx={{ 
+                                            maxWidth: '450px', 
+                                            // height: '100%', 
+                                            // Utiliser 'auto' pour que les articles s'ajustent dynamiquement 
+                                            flex: '1', // Pour permettre à chaque élément de remplir l'espace disponible
+                                            display: 'flex', // Ajout d'une flexbox pour aligner le contenu
+                                            flexDirection: 'column', // Pour aligner le contenu verticalement
+                                        }}> 
+                                            <Typography variant="h3">WANTED</Typography>
+                                            <img src={element?._links?.thumbnail?.href} alt={element?.entity_id + "-" + element?.name} style={{ width: '80%', height: '45%'}}/>
+                                            <Typography>{element?.name} {element?.forename}</Typography>
+                                            {element?.arrest_warrants && element?.arrest_warrants[0] && 
+                                                <Typography>{element?.arrest_warrants[0]?.charge}</Typography>
+                                            }
+                                            <Button 
+                                            onClick={() => more(element)}>
+                                                + 
+                                            </Button>
+                                        </Paper>
+                                    </Box>
                                 ))}
                         </Carousel>
-                    </div>
+                    </Box>
                     {/* ANCHOR Infos Supplémentaires */}
                     {showMore && (
-                        <div key={"additional-info-" + current[0].entity_id} ref={newDivRef}>
-                            <div>
-                                <h2>WANTED</h2>
-                                <img src={current[0]._links.thumbnail.href} alt="" />
-                            </div>
-                            <div>
-                                <h3>Informations supplémentaires {current[0].name}</h3>
-                                <p>{current[0].date_of_birth}</p>
-                                <p>{current[0].place_of_birth}</p>
-                            </div>
-                            <div>
-                                <div>
-                                    <span>
-                                        <h3>Charges :</h3>
-                                        <p>{current[0].arrest_warrants[0].charge}</p>
-                                    </span>
-                                </div>
-                                <div>
-                                    <h3>Identity</h3>
-                                    <span>
-                                        <p>Family name :</p>
-                                        <p>{current[0]?.name}</p>
-                                    </span>
-                                    <span>
-                                        <p>Forename :</p>
-                                        <p>{current[0]?.forename}</p>
-                                    </span>
-                                    <span>
-                                        <p>Gender :</p>
-                                        <p>{current[0]?.sex_id}</p>
-                                    </span>
-                                    <span>
-                                        <p>Date of birth :</p>
-                                        <p>{current[0]?.date_of_birth}</p>
-                                    </span>
-                                    <span>
-                                        <p>Place of birth :</p>
-                                        <p>{current[0]?.place_of_birth}</p>
-                                    </span>
-                                    <span>
-                                        <p>Nationality :</p>
-                                        <p>{current[0]?.nationalities[0]}</p>
-                                    </span>
-                                </div>
-                                <div>
-                                    <h3>Physical Description :</h3>
-                                    <span>
-                                        <p>Distinguishing Marks :</p>
-                                        <p>{current[0]?.distinguishing_marks}</p>
-                                    </span>
-                                    <span>
-                                        <p>Eyes Colors :</p>
-                                        <p>{current[0]?.eyes_colors_id}</p>
-                                    </span>
-                                    <span>
-                                        <p>Hair Color :</p>
+                        <Box key={"additional-info-" + current[0].entity_id} ref={newDivRef}>
+                            <Grid container spacing={2}>
+                                <Grid item xs={12} sm={6}>
+                                    <Typography variant="h2">WANTED</Typography>
+                                    <img src={current[0]._links.thumbnail.href} alt="Current Criminel" />
+                                </Grid>
+                                <Grid item xs={12} sm={6}>
+                                    <Typography variant="h3">Informations supplémentaires {current[0].name}</Typography>
+                                    <Typography>{current[0].date_of_birth}</Typography>
+                                    <Typography>{current[0].place_of_birth}</Typography>
+                                    <Box>
+                                        <Typography variant="h3">Charges :</Typography>
+                                        <Typography>{current[0].arrest_warrants[0].charge}</Typography>
+                                    </Box>
+                                    <Box>
+                                        <Typography variant="h3">Identity</Typography>
+                                        <Typography>Family name :</Typography>
+                                        <Typography>{current[0]?.name}</Typography>
+                                        <Typography>Forename :</Typography>
+                                        <Typography>{current[0]?.forename}</Typography>
+                                        <Typography>Gender :</Typography>
+                                        <Typography>{current[0]?.sex_id}</Typography>
+                                        <Typography>Date of birth :</Typography>
+                                        <Typography>{current[0]?.date_of_birth}</Typography>
+                                        <Typography>Place of birth :</Typography>
+                                        <Typography>{current[0]?.place_of_birth}</Typography>
+                                        <Typography>Nationality :</Typography>
+                                        <Typography>{current[0]?.nationalities[0]}</Typography>
+                                    </Box>
+                                    <Box>
+                                        <Typography variant="h3">Physical Description :</Typography>
+                                        <Typography>Distinguishing Marks :</Typography>
+                                        <Typography>{current[0]?.distinguishing_marks}</Typography>
+                                        <Typography>Eyes Colors :</Typography>
+                                        <Typography>{current[0]?.eyes_colors_id}</Typography>
+                                        <Typography>Hair Color :</Typography>
                                         {current && current[0]?.hairs_id && current[0]?.hairs_id.length > 0 ? (
-                                            <p>{current[0]?.hairs_id[0]}</p>
+                                            <Typography>{current[0]?.hairs_id[0]}</Typography>
                                         ) : (
-                                            <p>Aucune information sur la couleur des cheveux disponible.</p>
+                                            <Typography>Aucune information sur la couleur des cheveux disponible.</Typography>
                                         )}
-                                    </span>
-                                    <span>
-                                        <p>Height</p>
-                                        <p>{current[0]?.height}</p>
-                                    </span>
-                                    <span>
-                                        <p>Weight</p>
-                                        <p>{current[0]?.weight}</p>
-                                    </span>
-                                </div>
-                                <div>
-                                    <h3>Details</h3>
-                                    <span>
-                                        <p>Languages spoken</p>
+                                        <Typography>Height</Typography>
+                                        <Typography>{current[0]?.height}</Typography>
+                                        <Typography>Weight</Typography>
+                                        <Typography>{current[0]?.weight}</Typography>
+                                    </Box>
+                                    <Box>
+                                        <Typography variant="h3">Details</Typography>
+                                        <Typography>Languages spoken</Typography>
                                         {current && current[0]?.languages_spoken_ids && current[0]?.languages_spoken_ids.length > 0 ? (
-                                            <p>{current[0]?.languages_spoken_ids[0]}</p>
+                                            <Typography>{current[0]?.languages_spoken_ids[0]}</Typography>
                                         ) : (
-                                            <p>Aucune information sur les différentes parlées.</p>
+                                            <Typography>Aucune information sur les différentes parlées.</Typography>
                                         )}
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
+                                    </Box>
+                                </Grid>
+                            </Grid>
+                        </Box>
                     )}
                     {/* ANCHOR Boutton de retour au haut de la page */}
-                    <button onClick={() => clicked()}>CLICK</button>
-                </div>
-            </div>
+                    <Button onClick={() => clicked()}>CLICK</Button>
+                </Box>
+            </Box>
         </>
     )
 }
