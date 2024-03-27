@@ -5,6 +5,10 @@ import Button from '@mui/material/Button';
 import { theme } from '../Theme/theme';
 import SendIcon from '@mui/icons-material/Send';
 import Paper from '@mui/material/Paper';
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+
+
 
 function Report_compo() {
     const validationSchema = Yup.object().shape({
@@ -72,7 +76,14 @@ function Report_compo() {
             onSubmit={handleSubmit}
         >
             {formik => (
-                <Form>
+                <Form style={{ maxHeight: 'calc(100vh - 100px)', overflowY: 'auto' }}>
+                       <Box position="relative" width="100%" height="60vh" marginTop="-30px">
+                    <img src="src/assets/img/crime_scene.jpg" alt="Crime Scene" style={{ width: '100%', height: '80%', objectFit: 'cover' }} />
+                    <Box position="absolute" top={0} left={0} width="100%" height="80%" bgcolor="rgba(255, 255, 255, 0.6)" />
+                    <Box position="absolute" bottom={100} right={0} p={2}>
+                        <Typography variant="h3" style={{ color: 'yellow' }}>Aidez nous à les retrouver</Typography>
+                    </Box>
+                </Box>
                     <Paper
                      sx={{ 
                         backgroundColor: theme.palette.black.main,
@@ -86,7 +97,15 @@ function Report_compo() {
                     }}
                     >
                     <div>
-                        <label htmlFor="choisirPays">Choisissez votre pays :</label>
+                        <label htmlFor="choisirPays">Choisissez votre pays :</label><br />
+                        <Box
+                        sx={{
+                            border: '1px solid black', // Exemple de style
+                            borderRadius: theme.shape.borderRadius, // Exemple de style
+                            padding: '10px', // Exemple de style
+                            textAlign: 'center',
+                        }}
+                        >
                         <Field
                             name="choisirPays"
                             as="select"
@@ -98,30 +117,58 @@ function Report_compo() {
                                 <option key={country} value={country}>{country}</option>
                             ))}
                         </Field>
+                        </Box>
                         <ErrorMessage name="choisirPays" component="span"/>
                     </div>
                     <div>
-                        <label htmlFor="criminel">Nom du criminel concerné:</label>
+                        <label htmlFor="criminel">Nom du criminel concerné:</label><br />
+                        <Box
+                        sx={{
+                            border: '1px solid black', // Exemple de style
+                            borderRadius: theme.shape.borderRadius, // Exemple de style
+                            padding: '10px', // Exemple de style
+                            textAlign: 'center',
+                        }}
+                        >
                         <Field 
                             name="criminel" 
                             type="text" 
                             id="criminel"
                             onClick={() => handleFieldClick('criminel', formik)}
                         />
+                        </Box>
+
                         <ErrorMessage name="criminel" component="span"/>
                     </div>
                     <div>
-                        <label htmlFor="email">Votre adresse mail:</label>
+                        <label htmlFor="email">Votre adresse mail:</label><br />
+                        <Box
+                        sx={{
+                            border: '1px solid black', // Exemple de style
+                            borderRadius: theme.shape.borderRadius, // Exemple de style
+                            padding: '10px', // Exemple de style
+                            textAlign: 'center',
+                        }}
+                        >
                         <Field 
                             name="email" 
                             type="text" 
                             id="email"
                             onClick={() => handleFieldClick('email', formik)}
                         />
+                        </Box>
                         <ErrorMessage name="email" component="span"/>
                     </div>
                     <div>
-                        <label htmlFor="raisonSignalement">Raison du signalement:</label>
+                        <label htmlFor="raisonSignalement">Raison du signalement:</label><br />
+                        <Box
+                        sx={{
+                            border: '1px solid black', // Exemple de style
+                            borderRadius: theme.shape.borderRadius, // Exemple de style
+                            padding: '10px', // Exemple de style
+                            textAlign: 'center',
+                        }}
+                        >
                         <Field 
                             name="raisonSignalement" 
                             type="textarea" 
@@ -129,18 +176,22 @@ function Report_compo() {
                             component="textarea"
                             onClick={() => handleFieldClick('raisonSignalement', formik)}
                         />
+                        </Box>
                         <ErrorMessage name="raisonSignalement" component="span"/>
                     </div>
+                    <div style={{ display: 'flex', justifyContent: 'center' }}>
                     <Button 
                     variant="contained" 
                     size="small"
                     sx={{ 
                         backgroundColor: theme.palette.black.main,
                         borderRadius: theme.shape.borderRadius, // Utilisation correcte de borderRadius
-                        border: '2px solid yellow'
+                        border: '2px solid yellow',
+                        marginTop: 5,
                     }}
                     onClick={formik.handleSubmit} 
                     endIcon={<SendIcon />}>Envoyer</Button> 
+                    </div>
 
                     {formSubmitted && <div>Le formulaire a bien été envoyé.</div>}
                     </Paper>

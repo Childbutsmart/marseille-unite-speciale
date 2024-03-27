@@ -28,5 +28,6 @@ export const theme=createTheme({
 
     shape: {
         borderRadius: 10, // Vous pouvez ajuster le rayon selon vos besoins
+        ofyou:50
     }
 })
