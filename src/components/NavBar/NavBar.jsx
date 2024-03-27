@@ -12,6 +12,7 @@ import { Link } from 'react-router-dom';
 function Navbar() {
     const [open, setOpen] = useState(false);
     const isMobile = useMediaQuery('(max-width: 360px)');
+    const logoSize = isMobile ? '150px' : '250px'
 
     const handleDrawerOpen = () => {
         setOpen(true);
@@ -27,7 +28,11 @@ function Navbar() {
             <AppBar position="fixed" sx={{ backgroundColor: theme.palette.black.main,marginBottom: '30px' }}>
                 <Toolbar>
                     <Box sx={{ position: 'relative', width: '100%' }}>
-                        <img src="./src/assets/img/logowhit.png" alt="Logo" style={{ width: '250px', height: '300px', position: 'absolute', top: '-120px', left: '-50px' }} />
+                        
+                    <img src="./src/assets/img/logowhit.png" alt="Logo" style={{ width: isMobile ?'100px':'250px',  height:isMobile ?'150px' :'300px', 
+                    position: 'absolute', 
+                    top:isMobile ? '-60px':'-120px', 
+                    left:isMobile ? '-20px':'-50px' }} />
                     </Box>
 
                     {isMobile && (
@@ -57,7 +62,7 @@ function Navbar() {
                                     <ListItemIcon sx={{ color: theme.palette.otherColor.main }}>
                                         <PublicIcon />
                                     </ListItemIcon>
-                                    <ListItemText primary="Carte du Monde" primaryTypographyProps={{ sx: { whiteSpace: 'normal', lineHeight: 'normal' } }} />
+                                    <ListItemText primary="Carte" primaryTypographyProps={{ sx: { whiteSpace: 'normal', lineHeight: 'normal' } }} />
                                 </Link>
                             </ListItem>
                             <ListItem button sx={{ mr: 2 }}>
@@ -65,7 +70,7 @@ function Navbar() {
                                     <ListItemIcon sx={{ color: theme.palette.otherColor.main }}>
                                         <ListAltIcon />
                                     </ListItemIcon>
-                                    <ListItemText primary="Liste des Criminels" />
+                                    <ListItemText primary="Criminels" />
                                 </Link>
                             </ListItem>
                             <ListItem button>
