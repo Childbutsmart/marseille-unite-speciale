@@ -28,7 +28,6 @@ ignore.txt
 .env
 
 #JSON
-notice.json
 notice-img.json
 notice-self.json
 AddCoordinates.json
