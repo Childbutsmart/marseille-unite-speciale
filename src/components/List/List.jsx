@@ -126,7 +126,7 @@ const List = () => {
                 marginTop: '150px', 
                 maxWidth: '100%',
             }}>
-                <Typography variant="h1" style={{
+                <Typography variant="h1" sx={{
                         textAlign: 'center'
                 }}>
                     Liste des Criminels recherchés par INTERPOL
@@ -136,7 +136,7 @@ const List = () => {
                     flexDirection: 'column',
                     justifyContent: 'space-evenly',
                     maxWidth: '100%',
-                    minHeight: '800px',
+                    minHeight: '100%',
                 }}>
                     
                     {/* ANCHOR Search Bar */}
@@ -164,48 +164,56 @@ const List = () => {
                     {/* ANCHOR Carroussel */}
 
                     <Box key={1} id="crimeContainer" sx={{
-                        minHeight: '600px',
                         width: '80%',
+                        height: '600px',
                         margin: 'auto',
-                        overflow: 'hidden',
                     }}>
-                        <Carousel
+                        <Carousel id='Carousel'
                             autoPlay={false}
                             animation="slide"
                             timeout={500}
                             indicators={false}
                             navButtonsAlwaysInvisible={false}
-                            slidesToShow={4} // Afficher 4 articles à la fois
-                            style={{ 
+                            slidesToShow={4} 
+                            slidesToScroll={4}
+                            sx={{ 
                                 margin: 'auto', 
                                 maxWidth: '100%', 
-                                height: '100%',
+                                minHeight: '500px',
                                 display: 'flex',
                                 flexDirection: 'row', 
-                                alignItems: 'stretch', // Pour forcer les éléments à s'étirer verticalement
+                                justifyContent: 'center',
                             }}>
                                 {CardsInfos.map((element) => (
-                                    <Box key={element.entity_id} id={element.entity_id}>
-                                        <Paper sx={{ 
-                                            maxWidth: '450px', 
-                                            // height: '100%', 
-                                            // Utiliser 'auto' pour que les articles s'ajustent dynamiquement 
-                                            flex: '1', // Pour permettre à chaque élément de remplir l'espace disponible
-                                            display: 'flex', // Ajout d'une flexbox pour aligner le contenu
-                                            flexDirection: 'column', // Pour aligner le contenu verticalement
-                                        }}> 
-                                            <Typography variant="h3">WANTED</Typography>
-                                            <img src={element?._links?.thumbnail?.href} alt={element?.entity_id + "-" + element?.name} style={{ width: '80%', height: '45%'}}/>
-                                            <Typography>{element?.name} {element?.forename}</Typography>
-                                            {element?.arrest_warrants && element?.arrest_warrants[0] && 
-                                                <Typography>{element?.arrest_warrants[0]?.charge}</Typography>
-                                            }
-                                            <Button 
-                                            onClick={() => more(element)}>
-                                                + 
-                                            </Button>
-                                        </Paper>
-                                    </Box>
+                                    <Paper key={element.entity_id} id={element.entity_id} 
+                                    sx={{
+                                        maxWidth: '15vw', 
+                                        minWidth: '8vw',
+                                        minHeight: '450px',
+                                        maxHeight: '40vh', 
+                                        flex: '1', // Pour permettre à chaque élément de remplir l'espace disponible
+                                        display: 'flex', // Ajout d'une flexbox pour aligner le contenu
+                                        flexDirection: 'column', // Pour aligner le contenu verticalement
+                                        justifyContent: 'space-between',
+                                        alignItems: 'center',
+                                        boxShadow: '4px 4px 4px 5px grey',
+                                        border: '1px solid grey',
+                                    }}> 
+                                        <Typography variant="h3">WANTED</Typography>
+                                        <img src={element?._links?.thumbnail?.href} alt={element?.entity_id + "-" + element?.name} style={{ 
+                                            width: '80%', 
+                                            height: '45%'}}/>
+                                        <Typography>{element?.name} {element?.forename}</Typography>
+                                        {element?.arrest_warrants && element?.arrest_warrants[0] && 
+                                            <Typography sx={{
+                                                overflow: 'scroll'
+                                            }}>{element?.arrest_warrants[0]?.charge}</Typography>
+                                        }
+                                        <Button 
+                                        onClick={() => more(element)}>
+                                            + 
+                                        </Button>
+                                    </Paper>
                                 ))}
                         </Carousel>
                     </Box>
